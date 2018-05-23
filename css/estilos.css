@@ -1,5 +1,5 @@
 body {
-	background-color: skyblue   ;  
+	background-color:  ;  
 }
 
 footer{
@@ -14,15 +14,86 @@ img{
 }  
 #contenedor{
 	font-family: helvetica ;
-	font-size: 16px ;
+	font-size: 20px ;/*se utiliza para cambiar el tamaño */
 }
 #svg8{
 	display: block;
-	margin: 0 auto ;
+	margin: 1 auto ;
 }
 .itemindice1{
 	list-style-type: upper-roman;
 }
 .educacion{
 	color: blue ;
+}
+
+.itemindice2{
+	list-style-type: upper-roman;
+}
+.experiencia{
+	color: blue
+}
+
+/*SELECTORES DE ATRIBUTO
+
+a[href],----para selecionar todas etiquetas con su atributo
+a[href=''],-----para seleccionar por medio de etiqueta atributo y filtrar el valor
+img[src$=jpg],----para seleccionar imagenes con formato jpg 
+img[src^=jpg],----para buscar al principio del valor del atributo
+img[src~=jpg],-----para multiples valores separados por espacios
+img[src│-=jpg],-----para buscar el valor al inicio y en todo el contenido
+[title*=''],-----selccionara todas las etoquetas con su atributo 
+*/
+
+a[href^='html']{
+	color: blue ;
+	font-size: 20px ;
+}
+img[src$=jpg]{
+	border-radius: 30px  ;
+}
+
+/*SELECTORES AVANZADOS*/
+
+*{
+	margin: 4vh 4vw ;
+}
+h2 + h3{
+	text-decoration: underline;
+}
+h2 ~ p{
+	text-align: justify;
+}
+ul li{
+	list-style-type: circle;
+}
+
+
+a[href^='http//']: visited{   
+	color: green  ;
+}/*sirve para marcar en rojo los enlaces http que ya se visitaron */
+
+a:hover{    
+	color: green ;
+}/*sirve para agregar color al selector */
+
+h2:first-child{
+	text-decoration: underline;
+}
+input:focus{
+	width: 160px
+	height: 140px
+}
+
+p::first-letter{
+	text-transform: capitalize;
+}
+p::first-latter{
+	font-size: 32px
+}
+p::selection{
+
+}
+div{
+	background: grey ;
 }
